@@ -22,7 +22,7 @@ class PressingsController < ApplicationController
 
   def update
     @pressing = Pressing.update(pressing_params)
-    redirect_to @pressing
+    redirect_to pressing_path
   end
 
   private
