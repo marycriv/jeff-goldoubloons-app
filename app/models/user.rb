@@ -12,7 +12,6 @@ class User < ApplicationRecord
   def click
     @pressings = Pressing.all
     lottery = []
-
     @pressings.each do |p|
       p.rarity.to_i.times do
         lottery << p.id
@@ -20,5 +19,4 @@ class User < ApplicationRecord
     end
     Coin.create(user_id: self.id, pressing_id: lottery.sample.to_i)
   end
-
 end #end class
