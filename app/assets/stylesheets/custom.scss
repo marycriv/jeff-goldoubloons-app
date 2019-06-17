@@ -99,7 +99,7 @@ footer ul li {
   margin-left: 15px;
 }
 */
-
+/*
 .blinking{
     animation:blinkingText 1.6s infinite;
     font-size: 72px;
@@ -108,6 +108,16 @@ footer ul li {
     0%{     color: #000;    }
     49%{    color: transparent; }
     50%{    color: transparent; }
-    /*99%{    color: #444;  }*/
+    99%{    color: #444;  }
     100%{   color: #000;    }
+}
+*/
+
+
+#clipped-title1 {
+	background: url('https://previews.123rf.com/images/pinkomelet/pinkomelet1702/pinkomelet170200173/72811889-gold-glitter-texture-surface-background.jpg') no-repeat center center;
+	background-size: cover;
+	color: #fff;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 }
