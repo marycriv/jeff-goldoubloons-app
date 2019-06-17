@@ -23,12 +23,17 @@ puts "Users are created"
 
 
 puts "Creatin pressins"
-p1 = Pressing.create(name: "surprised goldblum", image_url: "/assets/1.gif")
-p2 = Pressing.create(name: "sexy goldblum", image_url: "/assets/2.gif")
-p3 = Pressing.create(name: "heavy-breathing goldblum", image_url: "/assets/3.gif")
-p4 = Pressing.create(name: "happy goldblum", image_url: "/assets/4.gif")
-p5 = Pressing.create(name: "steamy goldblum", image_url: "/assets/5.gif")
-p6 = Pressing.create(name: "monkey goldblum", image_url: "/assets/6.gif")
+p1 = Pressing.create(name: "surprised goldblum", image_url: "/assets/1.gif", rarity: 3)
+p2 = Pressing.create(name: "sexy goldblum", image_url: "/assets/2.gif", rarity: 1)
+p3 = Pressing.create(name: "heavy-breathing goldblum", image_url: "/assets/3.gif", rarity: 4)
+p4 = Pressing.create(name: "happy goldblum", image_url: "/assets/4.gif", rarity: 10)
+p5 = Pressing.create(name: "steamy goldblum", image_url: "/assets/5.gif", rarity: 1)
+p6 = Pressing.create(name: "monkey goldblum", image_url: "/assets/6.gif", rarity: 5)
+p7 = Pressing.create(name: "harvey goldblum", image_url: "/assets/7.gif", rarity: 3)
+p8 = Pressing.create(name: "cigar goldblum", image_url: "/assets/8.gif", rarity: 7)
+p9 = Pressing.create(name: "champion goldblum", image_url: "/assets/9.gif", rarity: 8)
+p10 = Pressing.create(name: "budapest goldblum", image_url: "/assets/10.gif", rarity: 6)
+
 puts "Pressins be done"
 
 puts "Creatin some coins"
