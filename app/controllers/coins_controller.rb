@@ -15,40 +15,15 @@ class CoinsController < ApplicationController
 
   def click
     @user = User.find(params[:id])
-    num = rand(1..100)
+    @pressings = Pressing.all
+    lottery = []
 
-    case num
-      when <= 30
-        Coin.create(user_id: @user.id, pressing_id: p1.id)
-        redirect_to users_path
-      when <= 50
-        Coin.create(user_id: @user.id, pressing_id: p2.id)
-        redirect_to users_path
-      when <= 60
-        Coin.create(user_id: @user.id, pressing_id: p3.id)
-        redirect_to users_path
-      when <= 70
-        Coin.create(user_id: @user.id, pressing_id: p4.id)
-        redirect_to users_path
-      when <= 75
-        Coin.create(user_id: @user.id, pressing_id: p5.id)
-        redirect_to users_path
-      when <= 80
-        Coin.create(user_id: @user.id, pressing_id: p6.id)
-        redirect_to users_path
-      when <= 85
-        Coin.create(user_id: @user.id, pressing_id: p7.id)
-        redirect_to users_path
-      when <= 90
-        Coin.create(user_id: @user.id, pressing_id: p8.id)
-        redirect_to users_path
-      when <= 95
-        Coin.create(user_id: @user.id, pressing_id: p9.id)
-        redirect_to users_path
-      when <= 100
-        Coin.create(user_id: @user.id, pressing_id: p10.id)
-        redirect_to users_path
+    @pressings.each do |p|
+      p.rarity.times do
+        lottery << p
+      end
     end
+    lottery.sample
   end
 
   def create
