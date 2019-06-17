@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
-  get 'static_pages/help'
+  # get 'static_pages/home'
+  # get 'static_pages/help'
   # get 'coins/index'
   # get 'coins/show'
   # get 'coins/new'
