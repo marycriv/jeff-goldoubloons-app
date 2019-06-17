@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new', as: :signup
   resources :pressings
   get 'home', to: 'static_pages#home', as: :home
+  get 'directory', to: 'static_pages#directory', as: :directory
   # resources :coins
 end
