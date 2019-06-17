@@ -28,7 +28,7 @@ class PressingsController < ApplicationController
   private
 
   def pressing_params
-    params.require(:pressing).permit(:name, :img_url)
+    params.require(:pressing).permit(:name, :image_url)
   end
 
 end
