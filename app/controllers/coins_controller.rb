@@ -13,25 +13,24 @@ class CoinsController < ApplicationController
     @coin = Coin.new
   end
 
-  # def click
+  # def self.click
   #   @user = User.find(params[:id])
   #   @pressings = Pressing.all
   #   lottery = []
   #
   #   @pressings.each do |p|
-  #     p.rarity.times do
-  #       lottery << p
+  #     p.rarity.to_i.times do
+  #       lottery << p.id
   #     end
   #   end
-  #   user_coin = lottery.sample
-  #   Coin.create(user_id: user.id, pressing_id: user_coin.id)
-  #   redirect_to users_path
+  #
+  #   Coin.create(user_id: @user.id, pressing_id: lottery.sample.to_i)
   # end
 
-  # def create
-  #   @coin = Coin.create(coin_params)
-  #   redirect_to users_path
-  # end
+  def create
+    @coin = Coin.create(coin_params)
+    redirect_to users_path
+  end
 
   private
 
