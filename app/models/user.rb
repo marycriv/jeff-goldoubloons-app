@@ -8,4 +8,17 @@ class User < ApplicationRecord
   def coin_names
     self.coins.select {|c| c.pressing }
   end
-end
+
+  def click
+    @pressings = Pressing.all
+    lottery = []
+
+    @pressings.each do |p|
+      p.rarity.to_i.times do
+        lottery << p.id
+      end
+    end
+    Coin.create(user_id: self.id, pressing_id: lottery.sample)
+  end
+
+end #end class

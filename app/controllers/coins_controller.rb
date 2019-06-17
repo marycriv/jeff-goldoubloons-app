@@ -1,5 +1,5 @@
 class CoinsController < ApplicationController
-  before_action :authorized?, only: [:index, :show]
+  # before_action :authorized?, only: [:index, :show]
 
   def index
     @coins = Coin.all
@@ -13,23 +13,25 @@ class CoinsController < ApplicationController
     @coin = Coin.new
   end
 
-  def click
-    @user = User.find(params[:id])
-    @pressings = Pressing.all
-    lottery = []
+  # def click
+  #   @user = User.find(params[:id])
+  #   @pressings = Pressing.all
+  #   lottery = []
+  #
+  #   @pressings.each do |p|
+  #     p.rarity.times do
+  #       lottery << p
+  #     end
+  #   end
+  #   user_coin = lottery.sample
+  #   Coin.create(user_id: user.id, pressing_id: user_coin.id)
+  #   redirect_to users_path
+  # end
 
-    @pressings.each do |p|
-      p.rarity.times do
-        lottery << p
-      end
-    end
-    lottery.sample
-  end
-
-  def create
-    @coin = Coin.create(coin_params)
-    redirect_to coins_path
-  end
+  # def create
+  #   @coin = Coin.create(coin_params)
+  #   redirect_to users_path
+  # end
 
   private
 
