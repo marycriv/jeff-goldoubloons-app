@@ -14,9 +14,16 @@ Rails.application.routes.draw do
   # get 'users/edit'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :users
-  get 'signup', to: 'users#new', as: :signup
   resources :pressings
   get 'home', to: 'static_pages#home', as: :home
-  # resources :coins
+  get 'directory', to: 'static_pages#directory', as: :directory
+  resources :coins
+
+
+  resources :users
+  # get '/users', to: "users#index"
+  get '/signup', to: "users#new", as: "signup"
+  get '/login', to: "sessions#login", as: "login"
+  post '/login', to: "sessions#create"
+  delete '/logout', to: "sessions#destroy"
 end

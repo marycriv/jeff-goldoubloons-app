@@ -13,7 +13,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    redirect_to @user
+    session[:user_id] = @user.id
+    redirect_to coins_path
   end
 
   def edit
@@ -22,7 +23,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.update(user_params)
-    redirect_to @user
+    redirect_to user_path
   end
 
   private

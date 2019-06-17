@@ -1,2 +1,8 @@
 <h1>Coins#show</h1>
 <p>Find me in app/views/coins/show.html.erb</p>
+
+<ul>
+  <li>User: <%= @coin.user.display_name.titlecase %></li>
+  <li>Coin: <%= @coin.pressing.name %></li>
+  <li>Image: <br><img src="<%= @coin.pressing.image_url %>"></li>
+</ul>
