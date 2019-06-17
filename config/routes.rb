@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # get 'static_pages/home'
+  # get 'static_pages/help'
   # get 'coins/index'
   # get 'coins/show'
   # get 'coins/new'
@@ -15,5 +17,6 @@ Rails.application.routes.draw do
   resources :users
   get 'signup', to: 'users#new', as: :signup
   resources :pressings
+  get 'home', to: 'static_pages#home', as: :home
   # resources :coins
 end

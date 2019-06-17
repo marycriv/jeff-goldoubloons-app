@@ -2,5 +2,8 @@
 <ul>
   <li>Name: <%= @user.display_name.titlecase %></li>
   <li><%= @user.coins %></li>
-  <li><img src="/assets/5.gif"></li>
 </ul>
+
+<%= button_to 'Edit user', edit_user_path, method: 'get' %>
+
+<img src="/assets/5.gif">
