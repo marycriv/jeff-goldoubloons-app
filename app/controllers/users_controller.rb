@@ -27,7 +27,6 @@ class UsersController < ApplicationController
   end
 
   def click
-    @user = User.find(params[:id])
     @pressings = Pressing.all
     lottery = []
     @pressings.each do |p|
