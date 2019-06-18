@@ -1,6 +1,10 @@
 class User < ApplicationRecord
   has_many :pressings, through: :coins
   has_many :coins
+  has_many :goldbudded_users, foreign_key: :goldbuder_id, class_name: 'Goldbud'
+  has_many :goldbudees, through: :goldbudded_users
+  has_many :goldbudding_users, foreign_key: :goldbudee_id, class_name: 'Goldbud'
+  has_many :goldbuders, through: :goldbudding_users
   has_secure_password
   validates :username, uniqueness: true
   validates :username, format: { with: /\A[a-zA-Z0-9]+\Z/ }

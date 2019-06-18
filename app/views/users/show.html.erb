@@ -6,11 +6,20 @@
   <img src="<%= c.pressing.image_url %>">
   <% end %>
   <li><%= @user.wallet %> <%= button_to "Add To Wallet", wallet_path, method: "get" %></li>
+  <% @user.goldbuders.each do |g| %>
+  <li><%= link_to g.display_name, g %></li>
+  <% end %>
 </ul>
 <br>
 <% if flash[:message] %>
   <%= flash[:message] %>
 <% end %>
-<center><%= link_to "Buy a coin", click_path, class: "btn btn-lg btn-primary", method: "post"%></center>
+<% if current_user == @user %>
+  <center><%= link_to "Buy a coin", click_path, class: "btn btn-lg btn-primary", method: "post"%></center>
+<% end %>
 <br>
 <center><%= link_to "Edit profile", edit_user_path, class: "btn btn-lg btn-primary" %></center>
+<br>
+<% if current_user != @user %>
+ <center><%= link_to "Add as Friend", add_goldbud_path, class: "btn btn-lg btn-primary", method: "post"%></center>
+<% end %>

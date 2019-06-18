@@ -28,5 +28,6 @@ Rails.application.routes.draw do
   post '/login', to: "sessions#create"
   delete '/logout', to: "sessions#destroy"
 
-  post '/users/:id', to: 'users#click', as: "click"
+  post '/users/:id/add_goldbud', to: "users#add_goldbud", as: "add_goldbud"
+  post '/users/:id', to: "users#click", as: "click"
 end
