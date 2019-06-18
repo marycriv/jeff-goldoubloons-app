@@ -18,7 +18,7 @@ class User < ApplicationRecord
         lottery << p.id
       end
     end
-    Coin.create(user_id: self.id, pressing_id: lottery.shuffle.sample.to_i) #add .shuffle later
+    Coin.create(user_id: self.id, pressing_id: lottery.shuffle.sample.to_i)
   end
 
 end #end class
