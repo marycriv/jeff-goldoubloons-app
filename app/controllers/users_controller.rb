@@ -45,6 +45,8 @@ class UsersController < ApplicationController
   def add_goldbud
     @user = User.find(params[:id])
     current_user.goldbuders << @user
+    @user.goldbuders << current_user
+    redirect_to current_user
   end
 
   private
