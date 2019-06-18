@@ -11,13 +11,13 @@ class SessionsController < ApplicationController
       redirect_to @user
     else
       flash.now[:danger] = 'Invalid username/password combination'
-      redirect_to "/home"
     end
   end
 
 
   def destroy
-    session[:user_id] = nil
+    log_out
+    redirect_to home_path
   end
 
 end
