@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorized?, only: [:index, :show]
+  before_action :authorized?, only: [:index, :show, :wallet]
   def index
     @users = User.all
   end
@@ -31,6 +31,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.coin_create
     redirect_to @user
+  end
+
+  def wallet
+    @user = User.find(params[:id])
+  end
+
+  def load_wallet
+    redirect_to wallet_path
   end
 
   private
