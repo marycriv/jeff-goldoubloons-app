@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validates :username, format: { with: /\A[a-zA-Z0-9]+\Z/ }
 
+
   def coin_names
     self.coins.select {|c| c.pressing }
   end
