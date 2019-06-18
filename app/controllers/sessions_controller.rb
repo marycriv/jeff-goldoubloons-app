@@ -7,11 +7,14 @@ class SessionsController < ApplicationController
     #authenticate the user
     @user = User.find_by(params[:username])
     if @user && @user.authenticate(params[:password])
-      session[:user_id] = @user.id
+      log_in @user
+      redirect_to @user
+    else
+      flash.now[:danger] = 'Invalid username/password combination'
+      redirect_to "/home"
     end
   end
 
-  
 
   def destroy
     session[:user_id] = nil

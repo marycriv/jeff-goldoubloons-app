@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  protect_from_forgery with: :exception
+  include SessionsHelper
   helper_method :logged_in?
 
   def current_user
@@ -13,6 +15,5 @@ class ApplicationController < ActionController::Base
 
   def authorized?
     redirect_to signup unless logged_in?
-
   end
 end
