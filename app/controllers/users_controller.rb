@@ -37,14 +37,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def load_wallet
-    redirect_to wallet_path
-  end
-
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :display_name)
+    params.require(:user).permit(:username, :password, :display_name, :wallet)
   end
 
 end

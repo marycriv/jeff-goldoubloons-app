@@ -1,10 +1,8 @@
 <h1>Add funds to <%= @user.username %>'s wallet</h1>
 
 <%= form_for @user do |f| %>
-<%= f.label "username" %>
-<%= f.text_field "username" %><br>
-<%= f.label "display name" %>
-<%= f.text_field "display_name" %><br>
+<%= f.label "wallet" %>
+<%= f.number_field "wallet" %><br>
 
 <%= f.submit "Submit" %>
 <% end %>

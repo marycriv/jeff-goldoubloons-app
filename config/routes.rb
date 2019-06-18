@@ -21,7 +21,7 @@ Rails.application.routes.draw do
 
 
   resources :users
-  get '/wallet', to: "users#wallet", as: "wallet"
+  get '/users/:id/wallet', to: "users#wallet", as: "wallet"
   # get '/users', to: "users#index"
   get '/signup', to: "users#new", as: "signup"
   get '/login', to: "sessions#login", as: "login"

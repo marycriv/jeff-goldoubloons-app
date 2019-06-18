@@ -5,6 +5,7 @@
   <li><%= c.pressing.name %></li>
   <img src="<%= c.pressing.image_url %>">
   <% end %>
+  <li><%= @user.wallet %></li>
 </ul>
 <br>
 <center><%= link_to "Buy a coin", click_path, class: "btn btn-lg btn-primary", method: "post"%></center>
