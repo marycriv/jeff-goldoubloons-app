@@ -5,19 +5,20 @@ class SessionsController < ApplicationController
 
   def create
     #authenticate the user
-    @user = User.find_by(params[:username])
-    if @user && @user.authenticate(params[:password])
-      log_in @user
-      redirect_to @user
+    user = User.find_by(username: params[:login_creds][:username])
+    if user && user.authenticate(params[:login_creds][:password])
+      log_in(user)
+      redirect_to '/home'
     else
       flash.now[:danger] = 'Invalid username/password combination'
-      redirect_to "/home"
+      redirect_to '/home'
     end
   end
 
 
   def destroy
-    session[:user_id] = nil
+    log_out
+    redirect_to home_path
   end
 
 end
