@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_18_172354) do
+ActiveRecord::Schema.define(version: 2019_06_18_201946) do
 
   create_table "coins", force: :cascade do |t|
     t.integer "user_id"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 2019_06_18_172354) do
     t.datetime "updated_at", null: false
     t.index ["pressing_id"], name: "index_coins_on_pressing_id"
     t.index ["user_id"], name: "index_coins_on_user_id"
+  end
+
+  create_table "goldbuds", force: :cascade do |t|
+    t.integer "goldbuder_id"
+    t.integer "goldbudee_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pressings", force: :cascade do |t|
