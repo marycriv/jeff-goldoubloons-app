@@ -11,6 +11,7 @@ class User < ApplicationRecord
   end
 
   def coin_create
+    self.update(wallet: self.wallet - 10)
     @pressings = Pressing.all
     lottery = []
     @pressings.each do |p|

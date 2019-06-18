@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authorized?, only: [:index, :show]
+  before_action :authorized?, only: [:index, :show, :wallet]
   def index
     @users = User.all
   end
@@ -29,14 +29,23 @@ class UsersController < ApplicationController
 
   def click
     @user = User.find(params[:id])
-    @user.coin_create
-    redirect_to @user
+    if @user.wallet >= 10
+      @user.coin_create
+      redirect_to @user
+    else
+      flash[:message] = "Need at least 10 to buy coin."
+      redirect_to @user
+    end
+  end
+
+  def wallet
+    @user = User.find(params[:id])
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:username, :password, :display_name)
+    params.require(:user).permit(:username, :password, :display_name, :wallet)
   end
 
 end
