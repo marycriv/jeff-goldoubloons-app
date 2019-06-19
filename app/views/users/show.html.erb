@@ -1,10 +1,10 @@
 <h1><%= @user.username %>'s profile</h1>
 <ul>
   <li>Name: <%= @user.display_name.titlecase %></li>
-  <% @user.coins.each do |c| %>
-  <li><%= c.pressing.name %></li>
-  <img src="<%= c.pressing.image_url %>">
-  <% end %>
+    <% @user.coins.each do |c| %>
+    <li><%= c.pressing.name %></li>
+    <img src="<%= c.pressing.image_url %>">
+    <% end %>
   <li><%= @user.wallet %> <%= button_to "Add To Wallet", wallet_path, method: "get" %></li>
   <% @user.goldbuders.each do |g| %>
   <li><%= link_to g.display_name, g %></li>
@@ -25,4 +25,5 @@
 <% end %>
 <% if current_user != @user && current_user.goldbuders.include?(@user)%>
  <center><%= link_to "Remove Friend", remove_goldbud_path(@user), class: "btn btn-lg btn-primary", method: "delete"%></center>
+ <br>
 <% end %>
