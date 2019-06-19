@@ -14,6 +14,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
+    @user.update(wallet: 0)
     session[:user_id] = @user.id
     redirect_to wallet_path(@user)
   end
