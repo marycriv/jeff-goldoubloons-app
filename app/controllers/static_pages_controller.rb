@@ -6,5 +6,6 @@ class StaticPagesController < ApplicationController
   end
 
   def directory
+    @pressings = Pressing.all
   end
 end
