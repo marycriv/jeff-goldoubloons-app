@@ -13,9 +13,15 @@
 <% if flash[:message] %>
   <%= flash[:message] %>
 <% end %>
-<% if current_user == @user %>
+<% if current_user.coins.empty? %>
+  <center><%= link_to "BUY A COIN", click_path, class: "bepis", method: "post" %></center>
+  <br>
+<% end %>
+<% if !current_user.coins.empty? %>
   <center><%= link_to "Buy a coin", click_path, class: "btn btn-lg btn-primary", method: "post"%></center>
   <br>
+<% end %>
+<% if current_user == @user %>
   <center><%= link_to "Edit profile", edit_user_path, class: "btn btn-lg btn-primary" %></center>
   <br>
 <% end %>
