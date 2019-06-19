@@ -1,15 +1,17 @@
 <h1><%= @user.display_name.titlecase %>'s profile</h1>
 <center><img width=100px src="<%= @user.icon %>"></center>
-<ul>
+<div class="collection">
     <% @user.coins.each do |c| %>
-    <h2><%= c.pressing.name.titlecase %></h2>
-    <img src="<%= c.pressing.image_url %>">
-    <% end %>
+    <div>
+       <h2><%= c.pressing.name.titlecase %></h2>
+       <img src="<%= c.pressing.image_url %>">
+    </div>
+      <% end %>
   <li><%= @user.wallet %> <%= button_to "Add To Wallet", wallet_path, method: "get" %></li>
   <% @user.goldbuders.each do |g| %>
   <li><%= link_to g.display_name, g %></li>
   <% end %>
-</ul>
+</div>
 <br>
 <% if flash[:message] %>
   <%= flash[:message] %>

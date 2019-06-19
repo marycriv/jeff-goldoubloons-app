@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @pressings = Pressing.all
     @user = User.find(params[:id])
   end
 
