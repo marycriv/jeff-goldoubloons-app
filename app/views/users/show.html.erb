@@ -1,4 +1,5 @@
 <h1><%= @user.display_name.titlecase %>'s profile</h1>
+<center><img width=100px src="<%= @user.icon %>"></center>
 <ul>
     <% @user.coins.each do |c| %>
     <h2><%= c.pressing.name.titlecase %></h2>
