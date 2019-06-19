@@ -123,3 +123,26 @@ footer ul li {
 	-webkit-text-fill-color: transparent;
 	-webkit-background-clip: text;
 }
+
+/* Custom Button for Buying a Coin for the First Time */
+
+.bepis {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  padding: 30px 30px;
+  font-size: 30px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  user-select: none;
+}
