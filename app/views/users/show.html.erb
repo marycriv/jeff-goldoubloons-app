@@ -1,8 +1,7 @@
-<h1><%= @user.username %>'s profile</h1>
+<h1><%= @user.display_name.titlecase %>'s profile</h1>
 <ul>
-  <li>Name: <%= @user.display_name.titlecase %></li>
     <% @user.coins.each do |c| %>
-    <li><%= c.pressing.name %></li>
+    <h2><%= c.pressing.name.titlecase %></h2>
     <img src="<%= c.pressing.image_url %>">
     <% end %>
   <li><%= @user.wallet %> <%= button_to "Add To Wallet", wallet_path, method: "get" %></li>
