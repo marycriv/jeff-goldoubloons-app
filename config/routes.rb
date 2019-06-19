@@ -15,8 +15,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :pressings
-  get 'home', to: 'static_pages#home', as: :home
-  get 'directory', to: 'static_pages#directory', as: :directory
+  get '/home', to: "static_pages#home", as: "home"
+  get '/directory', to: "static_pages#directory", as: "directory"
+  get '/help', to: "static_pages#help", as: "help"
   resources :coins
 
 
