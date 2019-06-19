@@ -13,11 +13,11 @@ Pressing.destroy_all
 puts "Destroying complete"
 
 puts "Creating users"
-u1 = User.create(username: "mary", password: "mary1", display_name: "mary criv", icon: "http://chittagongit.com/download/203678")
-u2 = User.create(username: "chris", password: "chris1", display_name: "chris y", icon: "https://66.media.tumblr.com/e961ef7c066324931f1a8e143d585d9b/tumblr_pib99yDsiN1xdlzxto8_250.jpg")
-u3 = User.create(username: "rishi", password: "rishi1", display_name: "squishy", icon: "https://i.pinimg.com/236x/5a/66/86/5a6686e198aea728a40c54aad91ce765.jpg")
-u4 = User.create(username: "kevin", password: "kevin1", display_name: "kebin", icon: "https://66.media.tumblr.com/ada595840168ff089185ff793144617a/tumblr_nvz4z1bg2t1ugye8so7_250.png")
-u5 = User.create(username: "jaimie", password: "jaimie1", display_name: "jamjam", icon: "https://66.media.tumblr.com/160c11619aa1095001b133166ba8e077/tumblr_on1aprXoZV1qirgu6o6_250.png")
+u1 = User.create(username: "mary", password: "mary1", display_name: "mary criv", wallet: 0, icon: "http://chittagongit.com/download/203678")
+u2 = User.create(username: "chris", password: "chris1", display_name: "chris y", wallet: 0, icon: "https://66.media.tumblr.com/e961ef7c066324931f1a8e143d585d9b/tumblr_pib99yDsiN1xdlzxto8_250.jpg")
+u3 = User.create(username: "rishi", password: "rishi1", display_name: "squishy", wallet: 0, icon: "https://i.pinimg.com/236x/5a/66/86/5a6686e198aea728a40c54aad91ce765.jpg")
+u4 = User.create(username: "kevin", password: "kevin1", display_name: "kebin", wallet: 0, icon: "https://66.media.tumblr.com/ada595840168ff089185ff793144617a/tumblr_nvz4z1bg2t1ugye8so7_250.png")
+u5 = User.create(username: "jaimie", password: "jaimie1", display_name: "jamjam", wallet: 0, icon: "https://66.media.tumblr.com/160c11619aa1095001b133166ba8e077/tumblr_on1aprXoZV1qirgu6o6_250.png")
 puts "Users are created"
 
 
