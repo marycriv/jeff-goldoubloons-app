@@ -18,7 +18,7 @@
   <center><%= link_to "BUY A COIN", click_path, class: "bepis", method: "post" %></center>
   <br>
 <% end %>
-<% if !current_user.coins.empty? %>
+<% if !current_user.coins.empty? && current_user == @user%>
   <center><%= link_to "Buy a coin", click_path, class: "btn btn-lg btn-primary", method: "post"%></center>
   <br>
 <% end %>

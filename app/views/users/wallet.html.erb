@@ -1,7 +1,15 @@
 <h1>Add funds to <%= @user.username %>'s wallet</h1>
 
+<%= label_tag "name" %>
+<%= text_field_tag "name", nil %>
+<%= label_tag "card_number", "Card Number" %>
+<%= text_field_tag "card_number", nil %>
+<%= label_tag "date", "Expiration Date" %>
+<%= text_field_tag "date", nil %>
+<%= label_tag "code", "Security Code" %>
+<%= text_field_tag "code", nil %>
 <%= form_for @user do |f| %>
-<%= f.label "wallet" %>
+<%= f.label "wallet", "Amount" %>
 <%= f.number_field "wallet" %><br>
 
 <%= f.submit "Submit" %>
