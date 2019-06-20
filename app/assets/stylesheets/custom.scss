@@ -23,6 +23,10 @@ textarea {
   margin-bottom: 10px;
 }
 
+.jumbotron {
+  width: 100%;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,51 +87,6 @@ p {
   color: #fff;
   text-decoration: none;
 }
-/* footer */
-
-/*
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
-*/
-/*
-.blinking{
-    animation:blinkingText 1.6s infinite;
-    font-size: 72px;
-}
-@keyframes blinkingText{
-    0%{     color: #000;    }
-    49%{    color: transparent; }
-    50%{    color: transparent; }
-    99%{    color: #444;  }
-    100%{   color: #000;    }
-}
-*/
 
 
 #clipped-title1 {

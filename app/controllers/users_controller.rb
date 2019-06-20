@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :authorized?, only: [:index, :show, :wallet]
+  before_action :logged_out?, only: [:new]
   before_action :restricted_access, only: [:edit, :wallet, :password]
 
   def index
@@ -68,5 +69,9 @@ class UsersController < ApplicationController
   def restricted_access
     @user = User.find(params[:id])
     redirect_to error_path unless current_user == @user || current_user.admin == true
+  end
+
+  def logged_out?
+    redirect_to error_path unless current_user.nil?
   end
 end

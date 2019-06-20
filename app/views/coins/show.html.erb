@@ -1,5 +1,5 @@
 <meta HTTP-EQUIV="REFRESH" content="5; <%="/users/#{@coin.user.id}"%>">
 <br><br>
-<h3>Congratulations, <%=@coin.user.display_name.titlecase%>, you got the <%=@coin.pressing.name.titlecase%> coin!</h3>
+<a href="<%="/users/#{@coin.user.id}"%>"><h3>Congratulations, <%=@coin.user.display_name.titlecase%>, you got the <%=@coin.pressing.name.titlecase%> coin!</h3></a>
 <br><br>
 <center><img src="<%= @coin.pressing.image_url %>"></center>

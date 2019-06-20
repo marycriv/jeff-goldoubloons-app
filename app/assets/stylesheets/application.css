@@ -32,4 +32,11 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+.icon {
+  border-radius: 50px;
+  width: 100px;
 }
