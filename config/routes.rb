@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   get '/users/:id/wallet', to: "users#wallet", as: "wallet"
   get '/users/:id/password', to: "users#password", as: "password"
   # get '/users', to: "users#index"
+  get '/error', to: "users#error", as: "error"
   get '/signup', to: "users#new", as: "signup"
   get '/login', to: "sessions#login", as: "login"
   post '/login', to: "sessions#create"

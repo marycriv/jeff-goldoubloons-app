@@ -10,4 +10,9 @@ class ApplicationController < ActionController::Base
   def authorized?
     redirect_to signup_path unless logged_in?
   end
+  
+  def restricted_access
+    @user = User.find(params[:id])
+    redirect_to error_path unless current_user == @user
+  end
 end

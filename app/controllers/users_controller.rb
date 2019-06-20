@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :authorized?, only: [:index, :show, :wallet]
+  before_action :restricted_access, only: [:edit, :wallet]
+
   def index
     @users = User.all
   end
@@ -39,7 +41,7 @@ class UsersController < ApplicationController
       @user.coin_create
       redirect_to @user
     else
-      flash[:message] = "Need at least 10 to buy coin."
+      flash[:message] = "Need at least $10 to buy coin."
       redirect_to @user
     end
   end
@@ -48,10 +50,12 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def error
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:username, :password, :display_name, :wallet, :icon)
   end
-
 end
