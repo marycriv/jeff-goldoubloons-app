@@ -27,6 +27,12 @@ class PressingsController < ApplicationController
     redirect_to pressing_path
   end
 
+  def destroy
+    @pressing = Pressing.find(params[:id])
+    @pressing.delete
+    redirect_to pressings_path
+  end
+
   private
 
   def pressing_params
