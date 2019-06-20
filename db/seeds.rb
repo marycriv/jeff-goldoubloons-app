@@ -50,5 +50,6 @@ p23 = Pressing.create(name: "golddavis", image_url: "/assets/23.gif", rarity: 8)
 p24 = Pressing.create(name: "the fly", image_url: "/assets/24.gif", rarity: 1)
 p25 = Pressing.create(name: "gator goldblum", image_url: "/assets/25.gif", rarity: 6)
 p26 = Pressing.create(name: "piano goldblum", image_url: "/assets/26.gif", rarity: 3)
+p27 = Pressing.create(name: "the jeff of egypt", image_url: "/assets/27.gif", rarity: 3)
 
 puts "Pressins be done"

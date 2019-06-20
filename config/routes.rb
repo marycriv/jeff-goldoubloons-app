@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
 
   resources :users
+  # get '/:username', to: "users#show"
   get '/users/:id/wallet', to: "users#wallet", as: "wallet"
   get '/users/:id/password', to: "users#password", as: "password"
   # get '/users', to: "users#index"

@@ -43,12 +43,12 @@
       <% if @user.user_pressing_ids.include?(p.id) %>
       <div>
          <img src="<%= p.image_url %>">
-         <h2><%= p.name.titlecase %> x <%= @user.user_pressing_ids.count(p.id) %></h2>
+         <h3><%= p.name.titlecase %> x <%= @user.user_pressing_ids.count(p.id) %></h3>
        </div>
     <%else%>
       <div>
         <img src="/assets/placeholder.png">
-        <h2>bepis</h2>
+        <h3>You don't have this coin yet!</h3>
       </div>
     <%end%>
   <%end%>

@@ -47,6 +47,20 @@ h2 {
   color: #777;
 }
 
+h3 {
+  font-size: 25px;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: #777;
+}
+
+h3:hover {
+  color: #000;
+}
+
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
