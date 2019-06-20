@@ -1,5 +1,6 @@
 class CoinsController < ApplicationController
   # before_action :authorized?, only: [:index, :show]
+  before_action :admin?
 
   def index
     @coins = Coin.all
