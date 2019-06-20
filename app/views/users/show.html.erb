@@ -34,18 +34,32 @@
 
 </div>
 
+<br>
 
 <div class="collection">
   <% @pressings.each do |p|%>
-      <% if @user.coin_names.include?(p.id) %>
+      <% if @user.user_pressing_ids.include?(p.id) %>
       <div>
          <img src="<%= p.image_url %>">
-         <h2><%= p.name.titlecase %></h2>
+         <h2><%= p.name.titlecase %> x <%= @user.user_pressing_ids.count(p.id) %></h2>
        </div>
     <%else%>
       <div>
-        <img src="https://vignette.wikia.nocookie.net/shipping/images/6/6d/Sailor_Moon.jpg/revision/latest/scale-to-width-down/350?cb=20160217211438">
+        <img src="/assets/test.png">
         <h2>bepis</h2>
       </div>
     <%end%>
   <%end%>
+</div>
+
+<br>
+
+<h1 class="goldbud_title">Goldbuds</h1>
+<div class="collection">
+  <% @user.goldbuders.each do |goldbud| %>
+    <div class="goldbud">
+      <img width=100px src="<%= goldbud.icon %>">
+      <h2><%= link_to goldbud.display_name.titlecase, goldbud %></h2>
+    </div>
+  <% end %>
+</div>
