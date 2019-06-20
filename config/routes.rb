@@ -22,11 +22,13 @@ Rails.application.routes.draw do
 
   resources :users
   get '/users/:id/wallet', to: "users#wallet", as: "wallet"
+  get '/users/:id/password', to: "users#password", as: "password"
   # get '/users', to: "users#index"
   get '/signup', to: "users#new", as: "signup"
   get '/login', to: "sessions#login", as: "login"
   post '/login', to: "sessions#create"
   delete '/logout', to: "sessions#destroy"
+
 
   post '/users/:id/add_goldbud', to: "goldbuds#add_goldbud", as: "add_goldbud"
   delete '/users/:id/delete', to: "goldbuds#destroy", as: "remove_goldbud"

@@ -29,6 +29,10 @@ class UsersController < ApplicationController
     redirect_to user_path
   end
 
+  def password
+    @user = User.find(params[:id])
+  end
+
   def click
     @user = User.find(params[:id])
     if @user.wallet >= 10
