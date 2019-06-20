@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authorized?, only: [:index, :show, :wallet]
-  before_action :restricted_access, only: [:edit, :wallet]
+  before_action :restricted_access, only: [:edit, :wallet, :password]
 
   def index
     @users = User.all
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    @user.update(wallet: 0)
+    @user.update(wallet: 0, admin: false)
     session[:user_id] = @user.id
     redirect_to wallet_path(@user)
   end
@@ -57,5 +57,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :password, :display_name, :wallet, :icon)
+  end
+
+  def restricted_access
+    @user = User.find(params[:id])
+    redirect_to error_path unless current_user == @user || current_user.admin == true
   end
 end

@@ -1,4 +1,6 @@
 class PressingsController < ApplicationController
+  before_action :admin?
+
   def index
     @pressings = Pressing.all
   end
