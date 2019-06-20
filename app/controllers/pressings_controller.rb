@@ -23,8 +23,9 @@ class PressingsController < ApplicationController
   end
 
   def update
-    @pressing = Pressing.update(pressing_params)
-    redirect_to pressing_path
+    @pressing = Pressing.find(params[:id])
+    @pressing.update(pressing_params)
+    redirect_to pressings_path
   end
 
   def destroy
@@ -36,7 +37,7 @@ class PressingsController < ApplicationController
   private
 
   def pressing_params
-    params.require(:pressing).permit(:name, :image_url)
+    params.require(:pressing).permit(:name, :image_url, :rarity)
   end
 
 end

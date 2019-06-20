@@ -32,19 +32,23 @@ p6 = Pressing.create(name: "monkey goldblum", image_url: "/assets/6.gif", rarity
 p7 = Pressing.create(name: "harvey goldblum", image_url: "/assets/7.gif", rarity: 3)
 p8 = Pressing.create(name: "cigar goldblum", image_url: "/assets/8.gif", rarity: 7)
 p9 = Pressing.create(name: "champion goldblum", image_url: "/assets/9.gif", rarity: 8)
-p10 = Pressing.create(name: "budapest goldblum", image_url: "/assets/10.gif", rarity: 6)
+p10 = Pressing.create(name: "budapest goldblum", image_url: "/assets/10.gif", rarity: 5)
+
+p11 = Pressing.create(name: "grandmaster goldblum", image_url: "/assets/11.gif", rarity: 9)
+p12 = Pressing.create(name: "cheeky goldblum", image_url: "/assets/12.gif", rarity: 7)
+p13 = Pressing.create(name: "hologram goldblum", image_url: "/assets/13.gif", rarity: 4)
+p14 = Pressing.create(name: "confused goldblum", image_url: "/assets/14.gif", rarity: 4)
+p15 = Pressing.create(name: "banzai goldblum", image_url: "/assets/15.gif", rarity: 2)
+p16 = Pressing.create(name: "yacht goldblum", image_url: "/assets/16.gif", rarity: 4)
+p17 = Pressing.create(name: "sick goldblum", image_url: "/assets/17.gif", rarity: 3)
+p18 = Pressing.create(name: "shotgun goldblum", image_url: "/assets/18.gif", rarity: 2)
+p19 = Pressing.create(name: "alien goldblum", image_url: "/assets/19.gif", rarity: 1)
+p20 = Pressing.create(name: "geenablum", image_url: "/assets/20.gif", rarity: 7)
+p21 = Pressing.create(name: "laughing goldblum", image_url: "/assets/21.gif", rarity: 6)
+p22 = Pressing.create(name: "poopy goldblum", image_url: "/assets/22.gif", rarity: 5)
+p23 = Pressing.create(name: "golddavis", image_url: "/assets/23.gif", rarity: 8)
+p24 = Pressing.create(name: "the fly", image_url: "/assets/24.gif", rarity: 1)
+p25 = Pressing.create(name: "gator goldblum", image_url: "/assets/25.gif", rarity: 6)
+p26 = Pressing.create(name: "piano goldblum", image_url: "/assets/26.gif", rarity: 3)
 
 puts "Pressins be done"
-
-puts "Creatin some coins"
-c1 = Coin.create(user_id: u1.id, pressing_id: p1.id)
-c2 = Coin.create(user_id: u1.id, pressing_id: p2.id)
-c3 = Coin.create(user_id: u1.id, pressing_id: p4.id)
-c4 = Coin.create(user_id: u2.id, pressing_id: p1.id)
-c5 = Coin.create(user_id: u3.id, pressing_id: p3.id)
-c6 = Coin.create(user_id: u4.id, pressing_id: p5.id)
-c7 = Coin.create(user_id: u4.id, pressing_id: p6.id)
-c8 = Coin.create(user_id: u5.id, pressing_id: p4.id)
-c9 = Coin.create(user_id: u5.id, pressing_id: p5.id)
-c10 = Coin.create(user_id: u5.id, pressing_id: p6.id)
-puts "Coins be created"
