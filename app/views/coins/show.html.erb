@@ -1,10 +1,5 @@
-<meta HTTP-EQUIV="REFRESH" content="4; <%="/users/#{@coin.user.id}"%>">
-
-<h1>Coins#show</h1>
-<p>Find me in app/views/coins/show.html.erb</p>
-
-<ul>
-  <li>User: <%= @coin.user.display_name.titlecase %></li>
-  <li>Coin: <%= @coin.pressing.name %></li>
-  <li>Image: <br><img src="<%= @coin.pressing.image_url %>"></li>
-</ul>
+<meta HTTP-EQUIV="REFRESH" content="5; <%="/users/#{@coin.user.id}"%>">
+<br><br>
+<h3>Congratulations, <%=@coin.user.display_name.titlecase%>, you got the <%=@coin.pressing.name.titlecase%> coin!</h3>
+<br><br>
+<center><img src="<%= @coin.pressing.image_url %>"></center>
