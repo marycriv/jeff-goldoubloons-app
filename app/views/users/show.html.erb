@@ -15,36 +15,19 @@
     <%end%>
   <%end%>
 
-
-
-
-
-
-<!-----
-<div class="collection">
-    <%# @user.coins.each do |c| %>
-    <div>
-       <h2><%#= c.pressing.name.titlecase %></h2>
-       <img src="<%#= c.pressing.image_url %>">
-    </div>
-      <%# end %>
-  <li><%#= @user.wallet %> <%#= button_to "Add To Wallet", wallet_path, method: "get" %></li>
-  <%# @user.goldbuders.each do |g| %>
-  <li><%#= link_to g.display_name, g %></li>
-  <%# end %>
-</div>
-<br>
------->
-
 <% if flash[:message] %>
   <%= flash[:message] %>
 <% end %>
 <% if current_user.coins.empty? %>
+<div>
   <center><%= link_to "BUY A COIN", click_path, class: "bepis", method: "post" %></center>
+  </div>
   <br>
 <% end %>
 <% if !current_user.coins.empty? && current_user == @user%>
+<div>
   <center><%= link_to "Buy a coin", click_path, class: "btn btn-lg btn-primary", method: "post"%></center>
+  </div>
   <br>
 <% end %>
 <% if current_user == @user %>
