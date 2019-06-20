@@ -1,2 +1,10 @@
-<h1>Pressings#index</h1>
-<p>Find me in app/views/pressings/index.html.erb</p>
+<h1>Pressings Index</h1>
+<ul>
+  <% @pressings.each do |pressing| %>
+  <li>
+    <%= link_to pressing.name.titlecase, pressing %>
+  </li>
+  <% end %>
+</ul>
+
+<center><%= link_to "New pressing", new_pressing_path, class: "btn btn-lg btn-primary" %></center>

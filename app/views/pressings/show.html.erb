@@ -1,2 +1,8 @@
-<h1>Pressings#show</h1>
-<p>Find me in app/views/pressings/show.html.erb</p>
+<h1><%= @pressing.name.titlecase %></h1>
+<div class="collection">
+  <img src="<%= @pressing.image_url %>">
+</div>
+<br>
+<p style="text-align: center;">Rarity: <%= @pressing.rarity %></p>
+
+<center><%= link_to "Edit pressing", edit_pressing_path, class: "btn btn-lg btn-primary" %></center>
