@@ -44,8 +44,8 @@ class UsersController < ApplicationController
   def click
     @user = User.find(params[:id])
     if @user.wallet >= 10
-      @user.coin_create
-      redirect_to @user
+      @coin = @user.coin_create
+      redirect_to @coin
     else
       flash[:message] = "Need at least $10 to buy coin."
       redirect_to @user
