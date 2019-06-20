@@ -1,24 +1,12 @@
-<h1><%= @user.display_name.titlecase %>'s profile</h1>
-<center><img width=100px src="<%= @user.icon %>"></center>
-<div class="collection">
-  <% @pressings.each do |p|%>
-      <% if @user.coin_names.include?(p.id) %>
-      <div>
-         <h2><%= p.name.titlecase %></h2>
-         <img src="<%= p.image_url %>">
-       </div>
-    <%else%>
-      <div>
-        <h2>bepis</h2>
-        <img src="https://vignette.wikia.nocookie.net/shipping/images/6/6d/Sailor_Moon.jpg/revision/latest/scale-to-width-down/350?cb=20160217211438">
-      </div>
-    <%end%>
-  <%end%>
+<div class="profile-header">
+  <img width=100px src="<%= @user.icon %>">
+  <h1><%= @user.display_name.titlecase %></h1>
+  <h2>$<%= @user.wallet %></h2>
 
 <% if flash[:message] %>
   <%= flash[:message] %>
 <% end %>
-<% if current_user.coins.empty? %>
+<% if current_user.coins.empty? && current_user == @user %>
 <div>
   <center><%= link_to "BUY A COIN", click_path, class: "bepis", method: "post" %></center>
   </div>
@@ -29,11 +17,11 @@
   <center><%= link_to "Buy a coin", click_path, class: "btn btn-lg btn-primary", method: "post"%></center>
   </div>
   <br>
-<% end %>
+<%end%>
 <% if current_user == @user %>
   <center><%= link_to "Edit profile", edit_user_path, class: "btn btn-lg btn-primary" %></center>
   <br>
-  <br>
+  <center><%= link_to "Refill your wallet", wallet_path, class: "btn btn-lg btn-primary" %></center>
 <% end %>
 <% if current_user != @user && !current_user.goldbuders.include?(@user)%>
  <center><%= link_to "Add as Friend", add_goldbud_path, class: "btn btn-lg btn-primary", method: "post"%></center>
@@ -42,3 +30,22 @@
  <center><%= link_to "Remove Friend", remove_goldbud_path(@user), class: "btn btn-lg btn-primary", method: "delete"%></center>
  <br>
 <% end %>
+
+
+</div>
+
+
+<div class="collection">
+  <% @pressings.each do |p|%>
+      <% if @user.coin_names.include?(p.id) %>
+      <div>
+         <img src="<%= p.image_url %>">
+         <h2><%= p.name.titlecase %></h2>
+       </div>
+    <%else%>
+      <div>
+        <img src="https://vignette.wikia.nocookie.net/shipping/images/6/6d/Sailor_Moon.jpg/revision/latest/scale-to-width-down/350?cb=20160217211438">
+        <h2>bepis</h2>
+      </div>
+    <%end%>
+  <%end%>
