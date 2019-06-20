@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @pressings = Pressing.all
+    @pressings = Pressing.all.sort_by {|pressing| pressing.rarity}.reverse
     @user = User.find(params[:id])
   end
 

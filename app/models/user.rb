@@ -10,7 +10,7 @@ class User < ApplicationRecord
   validates :username, format: { with: /\A[a-zA-Z0-9]+\Z/ }
 
 
-  def coin_names
+  def user_pressing_ids
     bepis = []
     self.coins.each {|c| bepis << c.pressing_id }
     bepis
