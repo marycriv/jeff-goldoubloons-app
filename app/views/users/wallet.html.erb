@@ -64,8 +64,8 @@
 </form>
 
 <%= form_for @user do |f| %>
-<%= f.label "wallet", "Amount" %>
-<%= f.number_field "wallet" %><br>
+<%= f.label "wallet", "Amount $" %>
+<%= f.number_field "wallet" %> USD<br>
 
 <%= f.submit "Submit" %>
 <% end %>

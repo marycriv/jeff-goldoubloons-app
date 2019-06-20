@@ -1,5 +1,5 @@
 <div class="profile-header">
-  <img width=100px src="<%= @user.icon %>">
+  <img class="icon" src="<%= @user.icon %>">
   <h1><%= @user.display_name.titlecase %></h1>
   <% if current_user == @user %>
     <h2>$<%= @user.wallet %></h2>
@@ -60,7 +60,7 @@
 <div class="collection">
   <% @user.goldbuders.each do |goldbud| %>
     <div class="goldbud">
-      <img width=100px src="<%= goldbud.icon %>">
+      <img class="icon" src="<%= goldbud.icon %>">
       <h2><%= link_to goldbud.display_name.titlecase, goldbud %></h2>
     </div>
   <% end %>

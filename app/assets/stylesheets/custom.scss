@@ -23,6 +23,10 @@ textarea {
   margin-bottom: 10px;
 }
 
+.jumbotron {
+  width: 100%;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,9 +87,17 @@ p {
   color: #fff;
   text-decoration: none;
 }
+
+#clipped-title1 {
+	background: url('https://previews.123rf.com/images/pinkomelet/pinkomelet1702/pinkomelet170200173/72811889-gold-glitter-texture-surface-background.jpg') no-repeat center center;
+	background-size: cover;
+	color: #fff;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
 /* footer */
 
-/*
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -113,29 +125,6 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
-}
-*/
-/*
-.blinking{
-    animation:blinkingText 1.6s infinite;
-    font-size: 72px;
-}
-@keyframes blinkingText{
-    0%{     color: #000;    }
-    49%{    color: transparent; }
-    50%{    color: transparent; }
-    99%{    color: #444;  }
-    100%{   color: #000;    }
-}
-*/
-
-
-#clipped-title1 {
-	background: url('https://previews.123rf.com/images/pinkomelet/pinkomelet1702/pinkomelet170200173/72811889-gold-glitter-texture-surface-background.jpg') no-repeat center center;
-	background-size: cover;
-	color: #fff;
-	-webkit-text-fill-color: transparent;
-	-webkit-background-clip: text;
 }
 
 /* Custom Button for Buying a Coin for the First Time */
