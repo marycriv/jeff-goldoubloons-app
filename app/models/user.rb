@@ -11,7 +11,9 @@ class User < ApplicationRecord
 
 
   def coin_names
-    self.coins.select {|c| c.pressing }
+    bepis = []
+    self.coins.each {|c| bepis << c.pressing_id }
+    bepis
   end
 
   def coin_create

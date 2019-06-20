@@ -1,18 +1,41 @@
 <h1><%= @user.display_name.titlecase %>'s profile</h1>
 <center><img width=100px src="<%= @user.icon %>"></center>
 <div class="collection">
-    <% @user.coins.each do |c| %>
+  <% @pressings.each do |p|%>
+      <% if @user.coin_names.include?(p.id) %>
+      <div>
+         <h2><%= p.name.titlecase %></h2>
+         <img src="<%= p.image_url %>">
+       </div>
+    <%else%>
+      <div>
+        <h2>bepis</h2>
+        <img src="https://vignette.wikia.nocookie.net/shipping/images/6/6d/Sailor_Moon.jpg/revision/latest/scale-to-width-down/350?cb=20160217211438">
+      </div>
+    <%end%>
+  <%end%>
+
+
+
+
+
+
+<!-----
+<div class="collection">
+    <%# @user.coins.each do |c| %>
     <div>
-       <h2><%= c.pressing.name.titlecase %></h2>
-       <img src="<%= c.pressing.image_url %>">
+       <h2><%#= c.pressing.name.titlecase %></h2>
+       <img src="<%#= c.pressing.image_url %>">
     </div>
-      <% end %>
-  <li><%= @user.wallet %> <%= button_to "Add To Wallet", wallet_path, method: "get" %></li>
-  <% @user.goldbuders.each do |g| %>
-  <li><%= link_to g.display_name, g %></li>
-  <% end %>
+      <%# end %>
+  <li><%#= @user.wallet %> <%#= button_to "Add To Wallet", wallet_path, method: "get" %></li>
+  <%# @user.goldbuders.each do |g| %>
+  <li><%#= link_to g.display_name, g %></li>
+  <%# end %>
 </div>
 <br>
+------>
+
 <% if flash[:message] %>
   <%= flash[:message] %>
 <% end %>
@@ -26,6 +49,7 @@
 <% end %>
 <% if current_user == @user %>
   <center><%= link_to "Edit profile", edit_user_path, class: "btn btn-lg btn-primary" %></center>
+  <br>
   <br>
 <% end %>
 <% if current_user != @user && !current_user.goldbuders.include?(@user)%>

@@ -19,5 +19,9 @@
    flex-direction: row;
    align-items: center;
    justify-content: center;
-   flex-wrap: wrap; 
+   flex-wrap: wrap;
  }
+
+ .container-fluid {
+    margin-top: 15px;
+}
