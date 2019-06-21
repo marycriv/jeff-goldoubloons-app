@@ -60,15 +60,21 @@
     </div>
   </form>
 
-<p class="wallet">Powered by:
-<img width="200px" style="border-radius: 5px" src="/assets/cryptochambr-logo.png"></p>
-
-
 
 <br>
+<div class="row">
+  <div style="margin-left:20px; width:300px;">
 <%= form_for @user do |f| %>
-<%= f.label "wallet", "Amount $" %>
-<%= f.number_field "wallet" %> USD<br>
+<%= f.label "wallet", "Amount: $" %>
+<%= f.number_field "wallet"%> USD<br><br>
 
-<%= f.submit "Submit" %>
+<%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>
+</div>
+</div>
+<br>
+<br>
+<div style="margin-left:80%; width:300px;">
+<p class="wallet">Powered by:
+<img width="200px" style="border-radius: 5px" src="/assets/cryptochambr-logo.png"></p>
+</div>

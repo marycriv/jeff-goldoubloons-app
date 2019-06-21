@@ -2,7 +2,7 @@
   <img class="icon" src="<%= @user.icon %>">
   <h1><%= @user.display_name.titlecase %></h1>
   <% if current_user == @user %>
-    <h2>$<%= @user.wallet %></h2>
+    <h4><br>$<%= @user.wallet %><br> in wallet</h4>
   <% end %>
 
 <% if flash[:message] %>
@@ -10,7 +10,7 @@
 <% end %>
 <% if current_user.coins.empty? && current_user == @user %>
 <div>
-  <center><%= link_to "BUY A COIN", click_path, class: "bepis", method: "post" %></center>
+  <center><%= link_to "BUY A COIN", click_path, class: "big-btn", method: "post" %></center>
   </div>
   <br>
 <% end %>

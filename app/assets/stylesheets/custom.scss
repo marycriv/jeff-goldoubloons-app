@@ -54,29 +54,30 @@ h2 {
 }
 
 h3 {
-  font-size: 25px;
-  letter-spacing: 1px;
+  font-family: "Montserrat";
+  font-size: 20px;
+  letter-spacing: 0.5px;
   margin-bottom: 30px;
   text-align: center;
-  font-weight: bold;
-  -webkit-text-stroke: 1.5px black;
+  -webkit-text-stroke: 1.2px black;
    color: white;
    text-shadow:
-       3px 3px 0 #000,
+       2px 2px 0 #000,
      -1px -1px 0 #000,
       1px -1px 0 #000,
       -1px 1px 0 #000,
        1px 1px 0 #000;
 }
 
-h3:hover {
-  text-decoration: none;
-  background-size: cover;
-  color: gray;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+h4 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: green;
+  line-height: 20px;
 }
-
 
 p {
   font-size: 1.1em;
@@ -147,7 +148,7 @@ footer ul li {
 
 /* Custom Button for Buying a Coin for the First Time */
 
-.bepis {
+.big-btn {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
