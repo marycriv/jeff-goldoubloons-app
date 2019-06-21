@@ -2,7 +2,7 @@
 <div class="collection">
 <% @users.each do |user| %>
 <div>
-<center><img class="icon" src="<%= user.icon %>"><br>
+<center><a href="<%="/users/#{user.id}"%>"><img class="icon" src="<%= user.icon %>"></a><br>
 <%= link_to user.display_name.titlecase, user %>
 </center></div>
 <% end %>
