@@ -1,15 +1,12 @@
 <h1>Add funds to <%= @user.username %>'s wallet</h1>
 
 
-<br>
-<div class="card"></div>
+  <form action="#">
 
-<form action="#">
+    <div class="container-fluid grid">
 
-  <div class="container-fluid grid">
-
-    <div class="row pull-center">
-      <div class="col-md-4">
+      <div class="row pull-center">
+        <div class="col-md-4">
 
         <div class="well">
 
@@ -58,11 +55,17 @@
           </div>
 
         </div>
+        </div>
       </div>
     </div>
+  </form>
 
-</form>
+<p class="wallet">Powered by:
+<img width="200px" style="border-radius: 5px" src="/assets/cryptochambr-logo.png"></p>
 
+
+
+<br>
 <%= form_for @user do |f| %>
 <%= f.label "wallet", "Amount $" %>
 <%= f.number_field "wallet" %> USD<br>

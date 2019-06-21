@@ -40,3 +40,54 @@
   border-radius: 50px;
   width: 100px;
 }
+
+.welcome {
+  background-color: #000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff;
+	font-family:'Arimo', sans-serif;
+	font-size:30px;
+	padding:30px 25px;
+	text-decoration:none;
+}
+
+.welcome:hover {
+  color: rgba(0, 0, 0, 0);
+  background-image: url('/assets/eyes.png');
+}
+
+.logged {
+  color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, 350%);
+  font-family: 'Arimo', sans-serif;
+}
+
+.logged:hover {
+  color: #606060;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, 350%);
+  font-family: 'Arimo', sans-serif;
+}
+
+.wallet {
+  font-size: 17px;
+  font-weight: bold;
+  margin-left: 10px;
+}
