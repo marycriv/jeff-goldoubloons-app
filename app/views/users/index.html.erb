@@ -1,6 +1,9 @@
 <h1>User directory</h1>
-<ul>
+<div class="collection">
 <% @users.each do |user| %>
-<li><%= link_to user.display_name.titlecase, user %></li>
+<div>
+<img class="icon" src="<%= user.icon %>"><br>
+<%= link_to user.display_name.titlecase, user %>
+</div>
 <% end %>
-</ul>
+</div>
