@@ -48,7 +48,7 @@ class UsersController < ApplicationController
       @coin = @user.coin_create
       redirect_to @coin
     else
-      flash[:message] = "Need at least $10 to buy coin."
+      flash[:message] = "You need at least $10 to buy coin."
       redirect_to @user
     end
   end

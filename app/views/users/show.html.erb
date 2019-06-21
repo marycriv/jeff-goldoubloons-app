@@ -57,11 +57,12 @@
 <br>
 
 <h1 class="goldbud_title">Goldbuds</h1>
-<div class="collection">
+
+<section class="goldbud">
   <% @user.goldbuders.each do |goldbud| %>
-    <div class="goldbud">
+      <div class="goldbud--content">
       <img class="icon" src="<%= goldbud.icon %>">
       <h2><%= link_to goldbud.display_name.titlecase, goldbud %></h2>
     </div>
   <% end %>
-</div>
+</section>
