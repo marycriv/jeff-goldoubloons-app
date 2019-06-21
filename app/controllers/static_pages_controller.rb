@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
   def directory
     @pressings = Pressing.all
   end
+
+  def bepis
+  end
 end

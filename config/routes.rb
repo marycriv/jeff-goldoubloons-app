@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get '/', to: "static_pages#home", as: "home"
   get '/directory', to: "static_pages#directory", as: "directory"
   get '/help', to: "static_pages#help", as: "help"
+  get '/bepis', to: "static_pages#bepis", as: "bepis"
   resources :coins
 
 
