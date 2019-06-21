@@ -1,5 +1,18 @@
-<meta HTTP-EQUIV="REFRESH" content="5; <%="/"%>">
 
-<h1>You are not authorized to view this page</h1>
 
-<center><%= link_to "Go Home", home_path, class: "btn btn-lg btn-primary" %></center>
+<style>
+  .navbar,
+  .footer {
+    display: none;
+  }
+</style>
+
+<body style="background-color:black;">
+
+<%= link_to "You are not authorized to view this page.", current_user, class: "error" %>
+
+
+<div class="errorContainer">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wJelEXaPhJ8?controls=0?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</body>

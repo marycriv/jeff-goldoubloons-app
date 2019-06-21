@@ -75,6 +75,31 @@
   background-image: url('/assets/eyes.png');
 }
 
+.error {
+  background-color: #000;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	display:inline-block;
+	cursor:pointer;
+	color:#fff;
+	font-family:'Arimo', sans-serif;
+	font-size:30px;
+	padding:30px 25px;
+	text-decoration:none;
+}
+
+.error:hover {
+  color: rgba(0, 0, 0, 0);
+  background-image: url('/assets/eyes.png');
+}
+
 .logged {
   color: white;
   position: fixed;
@@ -101,20 +126,36 @@
   margin-left: 10px;
 }
 
-.hansen {
+.liljeff {
     /* position:absolute; */
     width: 200px;
     /* bottom:0px; */
     margin-left: 90%;
-    margin-top: -231px;
+    margin-top: -300px;
 
 }
+
+
 
 .videoContainer {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.errorContainer {
+  position: inherit;
+  width: 100%;
+  height: 1000px;
+  margin-top: 5%;
   left: 0;
   bottom: 0;
   right: 0;
