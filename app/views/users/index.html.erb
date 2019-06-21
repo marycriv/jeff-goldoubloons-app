@@ -2,8 +2,8 @@
 <div class="collection">
 <% @users.each do |user| %>
 <div>
-<img class="icon" src="<%= user.icon %>"><br>
+<center><img class="icon" src="<%= user.icon %>"><br>
 <%= link_to user.display_name.titlecase, user %>
-</div>
+</center></div>
 <% end %>
 </div>
