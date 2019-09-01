@@ -72,7 +72,7 @@
 
 .welcome:hover {
   color: rgba(0, 0, 0, 0);
-  background-image: image-url('/assets/eyes.png');
+  background-image: url('/assets/eyes.png');
 }
 
 .error {
@@ -97,7 +97,7 @@
 
 .error:hover {
   color: rgba(0, 0, 0, 0);
-  background-image: image-url('/assets/eyes.png');
+  background-image: url('/assets/eyes.png');
 }
 
 .logged {
