@@ -10,8 +10,8 @@ puts "Destroying now"
 Coin.destroy_all
 User.destroy_all
 Pressing.destroy_all
-puts "Destroying complete"
 
+puts "Destroying complete"
 puts "Creating users"
 u1 = User.create(username: "mary", password: "mary1", display_name: "mary criv", wallet: 0, icon: "http://chittagongit.com/download/203678", admin: true)
 u2 = User.create(username: "chris", password: "chris1", display_name: "chris y", wallet: 0, icon: "https://66.media.tumblr.com/e961ef7c066324931f1a8e143d585d9b/tumblr_pib99yDsiN1xdlzxto8_250.jpg", admin: true)

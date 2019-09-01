@@ -14,4 +14,8 @@ class ApplicationController < ActionController::Base
   def admin?
     redirect_to error_path unless current_user.admin == true
   end
+
+  def home_screen?
+    redirect_to current_user unless !current_user
+  end
 end

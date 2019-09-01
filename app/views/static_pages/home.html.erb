@@ -1,20 +1,20 @@
-<div class="center jumbotron">
+<style>
+  .navbar,
+  .footer {
+    display: none;
+  }
+</style>
 
-  <div id="clipped-title1">
-    <h1>Welcome to Jeff Goldoubloons</h1>
-  </div>
-
+<body style="background-color:black;">
   <!-- <h2>
 
     This is the home page for the Jeff Goldoubloons app
   </h2> -->
 <% if logged_in? %>
-  <%= link_to "View profile!", current_user, class: "btn btn-lg btn-primary" %>
+  <%= link_to "Welcome home.", current_user, class: "welcome" %>
 <% else %>
-  <%= link_to "Sign up now!", '/signup', class: "btn btn-lg btn-primary" %>
+  <%= link_to "Enter all ye who seek the blum.", signup_path, class: "welcome" %>
 <% end %>
-</div>
-
-<center>
-  <%= link_to image_tag("/assets/4.gif", alt: "Doubloon example"), '/signup' %>
-</center>
+</body>
+<br>
+<center><a href="/login" class="logged">Or log in.</a></center>

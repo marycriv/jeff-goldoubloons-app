@@ -3,3 +3,5 @@
 <a href="<%="/users/#{@coin.user.id}"%>"><h3>Congratulations, <%=@coin.user.display_name.titlecase%>, you got the <%=@coin.pressing.name.titlecase%> coin!</h3></a>
 <br><br>
 <center><img src="<%= @coin.pressing.image_url %>"></center>
+<br>
+<center><h3>You now have <%=@coin.user.user_pressing_ids.count(@coin.pressing.id)%> <%=@coin.pressing.name.titlecase%> coin(s). </h3></center>
