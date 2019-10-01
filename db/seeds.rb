@@ -22,7 +22,7 @@ puts "Users are created"
 
 
 
-puts "Creatin pressins"
+puts "Creating new pressings"
 p1 = Pressing.create(name: "surprised goldblum", image_url: "/assets/1.gif", rarity: 3)
 p2 = Pressing.create(name: "sexy goldblum", image_url: "/assets/2.gif", rarity: 1)
 p3 = Pressing.create(name: "heavy-breathing goldblum", image_url: "/assets/3.gif", rarity: 4)
@@ -52,4 +52,4 @@ p25 = Pressing.create(name: "gator goldblum", image_url: "/assets/25.gif", rarit
 p26 = Pressing.create(name: "piano goldblum", image_url: "/assets/26.gif", rarity: 3)
 p27 = Pressing.create(name: "the jeff of egypt", image_url: "/assets/27.gif", rarity: 3)
 
-puts "Pressins be done"
+puts "Pressings created"
